@@ -1,0 +1,12 @@
+version: '3'
+services:
+  fedora:
+    build: .
+    volumes:
+      - "./root:/root"
+    ports:
+      - "4200:4200"
+    container_name: my-fedora
+    tty: true
+    working_dir: /root/angular-ja/.tmp/aio
+    command: yarn serve-and-sync
