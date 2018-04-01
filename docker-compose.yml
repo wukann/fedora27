@@ -3,7 +3,7 @@ services:
   fedora:
     build: .
     volumes:
-      - "./root:/root"
+      - "../fedora27work:/root"
     ports:
       - "4200:4200"
     container_name: my-fedora
