@@ -2,6 +2,7 @@ version: '3'
 services:
   fedora:
     build: .
+    image: wukann/fedora
     volumes:
       - "../fedora27work:/root"
     ports:
