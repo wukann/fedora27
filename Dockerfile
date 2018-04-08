@@ -2,7 +2,19 @@ FROM fedora:27
 
 WORKDIR /root
 RUN dnf upgrade -y && \
-  dnf install langpacks-ja procps-ng which findutils rsync patch bzip2 git openssl emacs nodejs 'dnf-command(config-manager)' -y && \
+  dnf install \
+    langpacks-ja \
+    procps-ng \
+    which \
+    findutils \
+    rsync \
+    patch \
+    bzip2 \
+    git \
+    openssl \
+    emacs \
+    nodejs \
+    'dnf-command(config-manager)' -y && \
   curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo && \
   dnf install yarn -y && \
   dnf config-manager --add-repo https://download.opensuse.org/repositories/shells:fish:release:2/Fedora_27/shells:fish:release:2.repo && \
